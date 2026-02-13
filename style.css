@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* ================= HEADER ================= */
+
+/* Estiliza a tag <header> */
+header {
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Cor padrão do texto branca */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Container interno do header (centraliza e limita largura) */
+.header-container {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 1200px; /* Limita a largura máxima */
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Espaço entre os elementos (logo e pesquisa) */
+    padding: 10px 40px; /* Espaçamento interno (cima/baixo = 10px, lados = 40px) */
+    color: #fff; /* Garante que o texto fique branco */
+}
+
+
+/* ================= LOGO ================= */
+
+/* Container da logo (imagem + texto) */
+.logo {
+    display: flex; /* Deixa imagem e texto lado a lado */
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Imagem da logo */
+.logo-img {
+    height: 50px; /* Altura fixa da imagem */
+    width: auto; /* Mantém proporção automática */
+}
+
+/* Texto ao lado da logo */
+.logo-texto {
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+
+/* ================= PESQUISA ================= */
+
+/* Container da barra de pesquisa */
+.pesquisa {
+    display: flex; /* Input e botão ficam lado a lado */
+    align-items: center; /* Alinha verticalmente */
+}
+
+/* Campo de texto (input) */
+.pesquisa input {
+    padding: 8px; /* Espaçamento interno */
+    width: 350px; /* Largura fixa */
+    border: 3px solid #bebebe; /* Borda cinza */
+    border-radius: 4px 0 0 4px; /* Arredonda só o lado esquerdo */
+    outline: none; /* Remove borda azul padrão ao clicar */
+}
+
+/* Botão da pesquisa */
+.pesquisa button {
+    background-color: #b3b3b3; /* Cor de fundo cinza */
+    border: 1px solid #000000; /* Borda preta */
+    border-left: none; /* Remove a borda esquerda (para juntar com o input) */
+    padding: 8px 12px; /* Espaçamento interno */
+    border-radius: 0 4px 4px 0; /* Arredonda só o lado direito */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Efeito quando passa o mouse no botão */
+.pesquisa button:hover {
+    background-color: #f2f2f2; /* Cor mais clara ao passar o mouse */
+}
+
+
+
+
+/* ================= CARROSSEL ================= */
+
+/* Container principal do carrossel */
+.carrossel {
+    position: relative; /* Permite posicionar os botões dentro dele */
+    width: 100%; /* Ocupa toda largura disponível */
+    max-width: 1000px; /* Limita largura máxima */
+    margin: 40px auto; /* Centraliza na tela e adiciona espaço em cima/baixo */
+    overflow: hidden; /* Esconde as imagens que saem da área visível */
+    border-radius: 10px; /* Arredonda as bordas */
+}
+
+/* Área interna onde as imagens ficam lado a lado */
+.carrossel-inner {
+    display: flex; /* Deixa os slides em linha horizontal */
+    transition: transform 0.5s ease-in-out; /* Animação suave ao trocar slide */
+}
+
+/* Cada item (slide) do carrossel */
+.carrossel-item {
+    min-width: 100%; /* Cada slide ocupa 100% da largura */
+}
+
+/* Imagens do carrossel */
+.carrossel-item img {
+    width: 100%; /* Imagem ocupa toda largura do slide */
+    height: 400px; /* Altura fixa */
+    object-fit: cover; /* Cobre toda área sem distorcer */
+}
+
+
+/* ================= BOTÕES DO CARROSSEL ================= */
+
+/* Botões de voltar e avançar */
+.prev, .next {
+    position: absolute; /* Ficam posicionados sobre o carrossel */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralização perfeita */
+    background: rgba(0,0,0,0.5); /* Fundo preto transparente */
+    color: white; /* Cor do ícone branca */
+    border: none; /* Remove borda padrão */
+    padding: 15px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de mãozinha */
+    font-size: 20px; /* Tamanho do ícone */
+    border-radius: 50%; /* Deixa o botão redondo */
+}
+
+/* Botão da esquerda */
+.prev {
+    left: 10px; /* Distância da borda esquerda */
+}
+
+/* Botão da direita */
+.next {
+    right: 10px; /* Distância da borda direita */
+}
+
+/* Efeito ao passar o mouse */
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.8); /* Fundo mais escuro */
+}
+
+
+/* ================= PRODUTOS ================= */
+
+/* Container principal da seção de produtos */
+.produtos {
+    max-width: 1200px; /* Largura máxima */
+    margin: 40px auto; /* Centraliza e adiciona espaçamento */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+/* Título da seção */
+.titulo {
+    font-size: 24px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Grid de produtos */
+.grid-produtos {
+    display: grid; /* Usa Grid Layout */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    /* Cria colunas automáticas com mínimo 220px */
+    gap: 20px; /* Espaço entre os cards */
+}
+
+
+/* ================= CARD DO PRODUTO ================= */
+
+.card {
+    background: #fff; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra leve */
+    transition: 0.3s; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-5px); /* Sobe levemente */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra mais forte */
+}
+
+/* Imagem do produto */
+.card img {
+    width: 100%; /* Ocupa toda largura do card */
+    height: 200px; /* Altura fixa */
+    object-fit: contain; /* Mantém proporção sem cortar */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+/* Nome do produto */
+.card h3 {
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+}
+
+/* Preço */
+.preco {
+    font-size: 18px; /* Tamanho maior */
+    font-weight: bold; /* Negrito */
+    color: #00a650; /* Verde estilo marketplace */
+    margin-bottom: 10px; /* Espaço abaixo */
+}
+
+/* Botão do card */
+.card button {
+    background: #3483fa; /* Azul */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mãozinha */
+    width: 100%; /* Ocupa toda largura do card */
+}
+
+/* Hover do botão */
+.card button:hover {
+    background: #2968c8; /* Azul mais escuro */
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza texto */
+    padding: 20px; /* Espaçamento interno */
+}
