@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #000000;
-    background-color: rgb(255, 255, 255);
+    background-color: #b3b3b3;
     margin: 0;
     padding: 0;
 }
@@ -83,9 +83,22 @@ header {
     font-size: 16px; /* Tamanho da fonte */
 }
 
+.Carrinho button {
+    background-color: #ffffff; /* Cor de fundo cinza */
+    border: 1px solid #000000; /* Borda preta */
+    border-left: none; /* Remove a borda esquerda (para juntar com o input) */
+    padding: 8px 12px; /* Espaçamento interno */
+    border-radius: 0 4px 4px 0; /* Arredonda só o lado direito */
+    cursor: pointer; /* Muda o cursor para mãozinha */
+    font-size: 16px; /* Tamanho da fonte */
+}
 /* Efeito quando passa o mouse no botão */
 .pesquisa button:hover {
     background-color: #f2f2f2; /* Cor mais clara ao passar o mouse */
+}
+
+.Carrinho button:hover {
+    background-color: #bebebe; /* Cor mais clara ao passar o mouse */
 }
 
 
@@ -135,7 +148,7 @@ header {
     padding: 15px; /* Espaçamento interno */
     cursor: pointer; /* Cursor de mãozinha */
     font-size: 20px; /* Tamanho do ícone */
-    border-radius: 50%; /* Deixa o botão redondo */
+    border-radius: 30%; /* Deixa o botão redondo */
 }
 
 /* Botão da esquerda */
@@ -161,12 +174,6 @@ header {
     max-width: 1200px; /* Largura máxima */
     margin: 40px auto; /* Centraliza e adiciona espaçamento */
     padding: 0 20px; /* Espaçamento lateral */
-}
-
-/* Título da seção */
-.titulo {
-    font-size: 24px; /* Tamanho da fonte */
-    margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
 /* Grid de produtos */
